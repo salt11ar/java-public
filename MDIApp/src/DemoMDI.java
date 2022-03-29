@@ -130,11 +130,11 @@ try {
 
 			
 			//URL url = new URL("file://www.salt11.com.ar/iSalt/img/photos/9.jpg");
-			File file = new File("D:\\home\\salt\\Dev\\SALT\\SALT.jpg");
+			//File file = new File("ImagenFondo.jpg");
 			System.out.println("Init");
-			BufferedImage image = ImageIO.read(file);
+			//BufferedImage image = ImageIO.read(file);
 			JDesktopPane pane = new JDesktopPane();
-			pane.setBorder(new ImagenFondo(image));
+			//pane.setBorder(new ImagenFondo(image));
 			
 			JInternalFrame internal = new JInternalFrame("internal",true,true,true,true);
 			internal.setBounds(100, 100, 200, 300);
@@ -153,10 +153,10 @@ try {
 			f.setSize(800,600);
 			
 			
-		} catch (MalformedURLException e) {
+		//} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
+		//	e.printStackTrace();
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
