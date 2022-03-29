@@ -80,7 +80,7 @@ public class BinaryGap {
     }
 
     
-    System.out.println("Result: " + nResult);
+    System.out.println("Result: " + maxGap);
     return maxGap; 
 
   }
