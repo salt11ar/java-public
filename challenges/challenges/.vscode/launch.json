@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Fibonacci",
+            "request": "launch",
+            "mainClass": "Fibonacci",
+            "projectName": "challenges_f76b9901"
+        },
+        {
+            "name": "Python: Archivo actual",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "challenges_f76b9901"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryGap",
+            "request": "launch",
+            "mainClass": "BinaryGap",
+            "projectName": "challenges_f76b9901"
+        },
+        {
+            "type": "java",
+            "name": "Launch OddOccurrencesInArray",
+            "request": "launch",
+            "mainClass": "OddOccurrencesInArray",
+            "projectName": "challenges_f76b9901"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sur",
+            "request": "launch",
+            "mainClass": "Sur",
+            "projectName": "challenges_f76b9901"
+        }
+    ]
+}
