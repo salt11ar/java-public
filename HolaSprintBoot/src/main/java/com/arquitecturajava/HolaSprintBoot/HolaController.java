@@ -17,7 +17,7 @@ public class HolaController {
 	@RequestMapping("/")
     @ResponseBody
     String home() {
-        return "Hola Mundo";
+        return "Hola spring boot example1";
     }
 	
 	@RequestMapping("/hola")
