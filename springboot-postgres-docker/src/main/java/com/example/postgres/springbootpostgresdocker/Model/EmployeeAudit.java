@@ -1,7 +1,5 @@
 package com.example.postgres.springbootpostgresdocker.Model;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
