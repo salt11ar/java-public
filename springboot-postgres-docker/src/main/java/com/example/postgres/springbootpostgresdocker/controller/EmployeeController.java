@@ -2,6 +2,8 @@ package com.example.postgres.springbootpostgresdocker.controller;
 
 import java.util.List;
 
+import de.mkammerer.argon2.Argon2;
+import de.mkammerer.argon2.Argon2Factory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -25,7 +27,13 @@ public class EmployeeController {
 
     @PostMapping("/employees")
     public Employee addEmployee(@RequestBody Employee employee) {
+        
+        Argon2 argon2 = Argon2Factory.create(Argon2Factory.Argon2Types.ARGON2id);
+        String hash = argon2.hash(1, 1024, 1, employee.getPassword());
+        employee.setPassword(hash);
+
         return employeeRepository.save(employee);
+
     }
 
 
@@ -36,14 +44,17 @@ public class EmployeeController {
 
     @GetMapping("employees/{id}")
     public ResponseEntity<Employee> findEmployeeById(@PathVariable(value = "id") Integer employeeId) {
+
         Employee employee = employeeRepository.findById(employeeId).orElseThrow(
                 () -> new ResourceNotFoundException("Employee not found" + employeeId));
         return ResponseEntity.ok().body(employee);
+
     }
 
     @PutMapping("employees/{id}")
     public ResponseEntity<Employee> updateEmployee(@PathVariable(value = "id") Integer employeeId,
                                                    @RequestBody Employee employeeDetails) {
+
         Employee employee = employeeRepository.findById(employeeId)
                 .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + employeeId));
         employee.setName(employeeDetails.getName());
@@ -54,6 +65,7 @@ public class EmployeeController {
 
     @DeleteMapping("employees/{id}")
     public ResponseEntity<Void> deleteEmployee(@PathVariable(value = "id") Integer employeeId) {
+        
         Employee employee = employeeRepository.findById(employeeId).orElseThrow(
                 () -> new ResourceNotFoundException("Employee not found" + employeeId));
         employeeRepository.delete(employee);
