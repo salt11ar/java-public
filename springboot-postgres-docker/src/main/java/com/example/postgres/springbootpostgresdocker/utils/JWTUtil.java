@@ -17,13 +17,13 @@ import io.jsonwebtoken.SignatureAlgorithm;
 @Component
 public class JWTUtil {
     @Value("${security.jwt.secret}")
-    private String key;
+    private String key = "ghk45jgherogho834go3h4g";
 
     @Value("${security.jwt.issuer}")
-    private String issuer;
+    private String issuer = "defaultIssuer";
 
     @Value("${security.jwt.ttlMillis}")
-    private long ttlMillis;
+    private long ttlMillis = 604800000;
 
     //private final Logger log = LoggerFactory.getLogger(JWTUtil.class);
 

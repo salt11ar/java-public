@@ -22,7 +22,7 @@ public class AuthController {
     @Autowired
     private EmployeeRepository employeeRepo;
 
-    private JWTUtil jwtUtil;
+    private JWTUtil jwtUtil = new JWTUtil();
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String login(@RequestBody Employee userExternal) {

@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\springboot-postgres-docker"
+		},
+		{
+			"path": "frontend"
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}

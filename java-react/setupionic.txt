@@ -1,0 +1,8 @@
+npm install -g @ionic/cli
+
+ionic start nombreproyecto sidemenu --type=react
+
+ionic integrations enable capacitor
+
+ionic build 
+
