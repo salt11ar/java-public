@@ -5,10 +5,15 @@ $(document).ready(function() {
 
 async function registrarUsuario() {
   let datos = {};
-  datos.nombre = document.getElementById('txtNombre').value;
-  datos.apellido = document.getElementById('txtApellido').value;
+  datos.firstname = document.getElementById('txtNombre').value;
+  datos.lastname = document.getElementById('txtApellido').value;
   datos.email = document.getElementById('txtEmail').value;
   datos.password = document.getElementById('txtPassword').value;
+
+  datos.phone= "";
+	datos.address= "";
+	datos.salary= "";
+
 
   let repetirPassword = document.getElementById('txtRepetirPassword').value;
 
@@ -17,7 +22,7 @@ async function registrarUsuario() {
     return;
   }
 
-  const request = await fetch('api/usuarios', {
+  const request = await fetch('api/employees', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',

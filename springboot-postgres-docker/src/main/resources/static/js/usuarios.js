@@ -11,7 +11,7 @@ function actualizarEmailDelUsuario() {
 
 
 async function cargarUsuarios() {
-  const request = await fetch('api/usuarios', {
+  const request = await fetch('api/employees', {
     method: 'GET',
     headers: getHeaders()
   });
@@ -22,8 +22,8 @@ async function cargarUsuarios() {
   for (let usuario of usuarios) {
     let botonEliminar = '<a href="#" onclick="eliminarUsuario(' + usuario.id + ')" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>';
 
-    let telefonoTexto = usuario.telefono == null ? '-' : usuario.telefono;
-    let usuarioHtml = '<tr><td>'+usuario.id+'</td><td>' + usuario.nombre + ' ' + usuario.apellido + '</td><td>'
+    let telefonoTexto = usuario.phone == null ? '-' : usuario.phone;
+    let usuarioHtml = '<tr><td>'+usuario.id+'</td><td>' + usuario.firstname + ' ' + usuario.lastname + '</td><td>'
                     + usuario.email+'</td><td>'+telefonoTexto
                     + '</td><td>' + botonEliminar + '</td></tr>';
     listadoHtml += usuarioHtml;
@@ -47,7 +47,7 @@ async function eliminarUsuario(id) {
     return;
   }
 
- const request = await fetch('api/usuarios/' + id, {
+ const request = await fetch('api/employees/' + id, {
     method: 'DELETE',
     headers: getHeaders()
   });

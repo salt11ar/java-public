@@ -7,6 +7,12 @@ async function iniciarSesion() {
   let datos = {};
   datos.email = document.getElementById('txtEmail').value;
   datos.password = document.getElementById('txtPassword').value;
+	datos.firstname = "";
+	datos.lastname= "";
+	datos.phone= "";
+	datos.address= "";
+	datos.salary= "";
+	
 
   const request = await fetch('api/login', {
     method: 'POST',
