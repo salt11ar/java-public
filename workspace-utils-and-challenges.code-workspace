@@ -1,13 +1,11 @@
 {
 	"folders": [
 		{
-			"path": "..\\springboot-postgres-docker"
+			"name": "utils",
+			"path": "utils"
 		},
 		{
-			"path": "frontend"
-		},
-		{
-			"path": "..\\utils"
+			"path": "challenges"
 		}
 	],
 	"settings": {

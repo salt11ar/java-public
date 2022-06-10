@@ -152,7 +152,7 @@ public class BytesAndBitsExample
 	List<Character> trial1 = new ArrayList<>();
 	
 	Bag b;
-	b.add()
+	b.add();
 	
 
 	for (char c: hello)
