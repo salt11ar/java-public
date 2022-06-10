@@ -9,6 +9,12 @@
 		}
 	],
 	"settings": {
-		"java.configuration.updateBuildConfiguration": "interactive"
+		"java.configuration.updateBuildConfiguration": "interactive",
+		"java.project.sourcePaths": [
+			"edu/math",
+			"edu/find",
+			".",
+			"challenges\\src"
+		]
 	}
 }

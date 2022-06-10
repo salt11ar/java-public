@@ -1,103 +1,3 @@
-
-
-
-import java.lang.*;
-import java.io.*;
-import java.util.*;
-
-public class BinaryGap {
-
-  static public int solution(int N)
-  {
-    int n=N;
-    int maxGap = 0;
-    int i = 0;
-    int igap= 0;
-
-    System.out.println("input integer: "+ n);
-    //convert to binary 
-    String str = Integer.toBinaryString(n);
-    System.out.println("input string: "+ str);
-    int strlen = str.length();
-    System.out.println("input strlen: "+ strlen);
-
-    //find first 1 
-
-    int firstIndex = str.indexOf('1');
-    System.out.println("1st i: "+ firstIndex);
-    System.out.println("1st char: "+ str.charAt(i));
-   
-    i = firstIndex+1;
-
-    while (i < strlen -1 )
-    {
-      igap=0; //reset for next gap loop
-      System.out.println("start loop... ");
-
-        while (str.charAt(i) == '0' )
-        {
-          System.out.println("i: "+ i);
-          System.out.println("char: "+ str.charAt(i));
-          i++;
-          igap++;
-          //System.out.println("igap: "+ igap);
-
-          if(i > strlen-1)      
-            break; //exit from cero detection if no more chars
-          
-        }
-
-        System.out.println("break on loop for ceros, i:"+ i);
-
-        if(i > strlen-1)  
-        {
-          System.out.println("breaking..." );
-          break;
-        }
-        
-        if (str.charAt(i) =='1')
-        {
-          System.out.println("gap valid, cause found a 1 at: " +i);
-          if(igap>maxGap )
-          {
-            System.out.println("new maxgap, previous: "+ maxGap+ "new: "+ igap);
-            maxGap = igap;
-          }
-       
-        }
-        else
-        {
-          System.out.println("not 1. breaking..." );
-          break;
-        }
-        
-        //ṕerf improvement
-        //seek to next 1 before a cero 
-        //i = str.indexOf('0');
-
-        i++;
-
-    }
-
-    
-    System.out.println("Result: " + maxGap);
-    return maxGap; 
-
-  }
-
-
-
-  public static void main(String[] args) {
-
-    int n=529;  //max 2147483647
-    int nResult = solution(n);
-    System.out.println("Result: " + nResult);
-
-    }
-   
-}
-
-
 /*
 A binary gap within a positive integer N is any maximal sequence of consecutive zeros that is surrounded by ones at both ends in the binary representation of N.
 
@@ -116,5 +16,81 @@ Write an efficient algorithm for the following assumptions:
 N is an integer within the range [1..2,147,483,647].
 */
 
+import java.io.*;
+import java.lang.*;
+import java.util.*;
 
+public class BinaryGap {
 
+  public static int solution(int N) {
+    int n = N;
+    int maxGap = 0;
+    int i = 0;
+    int igap = 0;
+
+    System.out.println("input integer: " + n);
+    //convert to binary
+    String str = Integer.toBinaryString(n);
+    System.out.println("input string: " + str);
+    int strlen = str.length();
+    System.out.println("input strlen: " + strlen);
+
+    //find first 1
+
+    int firstIndex = str.indexOf('1');
+    System.out.println("1st i: " + firstIndex);
+    System.out.println("1st char: " + str.charAt(i));
+
+    i = firstIndex + 1;
+
+    while (i < strlen - 1) {
+      igap = 0; //reset for next gap loop
+      System.out.println("start loop... ");
+
+      while (str.charAt(i) == '0') {
+        System.out.println("i: " + i);
+        System.out.println("char: " + str.charAt(i));
+        i++;
+        igap++;
+        //System.out.println("igap: "+ igap);
+
+        if (i > strlen - 1) break; //exit from cero detection if no more chars
+      }
+
+      System.out.println("break on loop for ceros, i:" + i);
+
+      if (i > strlen - 1) {
+        System.out.println("breaking...");
+        break;
+      }
+
+      if (str.charAt(i) == '1') {
+        System.out.println("gap valid, cause found a 1 at: " + i);
+        if (igap > maxGap) {
+          System.out.println(
+            "new maxgap, previous: " + maxGap + "new: " + igap
+          );
+          maxGap = igap;
+        }
+      } else {
+        System.out.println("not 1. breaking...");
+        break;
+      }
+
+      //ṕerf improvement
+      //seek to next 1 before a cero
+      //i = str.indexOf('0');
+
+      i++;
+    }
+
+    System.out.println("Result: " + maxGap);
+    return maxGap;
+  }
+
+  public static void main(String[] args) {
+    int n = 529; //max 2147483647
+    int nResult = solution(n);
+    System.out.println("Result: " + nResult);
+  }
+}
