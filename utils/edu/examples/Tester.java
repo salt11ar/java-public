@@ -30,7 +30,7 @@ public class Tester {
 
             for(int m =0 ; m <= expressions[i].length()-1 ; m++ )
             {
-                if (expressions[i].equalcharAt(m)  == '<' ) 
+                if (expressions[i].charAt(m)  == '<' ) 
                 { 
 
                     if (m+1 < expressions[i].length())

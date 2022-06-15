@@ -1,10 +1,4 @@
 
-
-
-import java.lang.*;
-import java.io.*;
-import java.util.*;
-
 public class OddOccurrencesInArray {
     public static void main(String[] args) {
 

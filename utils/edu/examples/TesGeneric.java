@@ -1,8 +1,6 @@
 
 package edu.examples;
 
-import java.util.List;
-
 class Test<T>
 {
 //	public T getFirst(List list){

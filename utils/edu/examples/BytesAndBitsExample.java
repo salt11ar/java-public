@@ -3,31 +3,10 @@
  */
 package edu.examples;
 
-import java.lang.*;
-import java.io.*;
-import java.util.*;
-
-/**
- * @author stomasini 05/06/2012
- *
- */
-
-public interface Ship {
-    void go();
-}
-
-public class MarineShip implements Ship {
-    public void go() {
-        System.out.println("Sea surface");
-    }
-}
-
-public class Submarine extends MarineShip{
-    public void go() {
-        System.out.println("Underwater");
-    }
-}
-
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.ListIterator;
 
 public class BytesAndBitsExample
 {
@@ -151,9 +130,7 @@ public class BytesAndBitsExample
 	char[] hello = input.toCharArray();
 	List<Character> trial1 = new ArrayList<>();
 	
-	Bag b;
-	b.add();
-	
+
 
 	for (char c: hello)
 		trial1.add(c);
@@ -163,11 +140,5 @@ public class BytesAndBitsExample
 	while (li.hasNext())
 		System.out.print(li.next());
 			}
-
-
-
-
-
-
 	
 }
