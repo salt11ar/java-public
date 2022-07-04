@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": [
+			"MDIApp/src",
+			"challenges"
+		],
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}
