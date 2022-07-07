@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 @Data
 @AllArgsConstructor
@@ -21,6 +23,8 @@ public class Employee{
 	private String name;
 	private String firstname;
 	private String lastname;
+	@NotBlank
+    @Size(min = 0, max = 200)
 	private String email;
 	private String phone;
 	private String address;
