@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SpringbootPostgresDockerApplication<springboot-postgres-docker>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.postgres.springbootpostgresdocker.SpringbootPostgresDockerApplication",
+            "projectName": "springboot-postgres-docker",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
