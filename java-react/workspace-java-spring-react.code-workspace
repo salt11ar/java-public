@@ -8,6 +8,10 @@
 		},
 		{
 			"path": "..\\utils"
+		},
+		{
+			"name": "reactive-example",
+			"path": "..\\reactive-reactor-example\\reactive-example"
 		}
 	],
 	"settings": {
