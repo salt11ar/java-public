@@ -60,7 +60,7 @@ public class FluxAndMonoService {
 
         return Flux.fromIterable(List.of("Mango","Orange","Banana"))
                 .transform(filterData)
-                .defaultIfEmpty("DefaultValue")
+                .defaultIfEmpty("DefaultValue")  // default value IF EMPTY RESULT
                 .log();
                                                     
     }
