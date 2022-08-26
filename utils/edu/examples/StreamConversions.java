@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
  
 /**
 * 
-* A simple Java Program to convert a collections with stream 
+* A simple Java Program to convert streams to collections
 * in Java.
 */
 public class StreamConversions{
