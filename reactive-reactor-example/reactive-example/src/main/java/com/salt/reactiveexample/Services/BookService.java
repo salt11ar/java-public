@@ -11,7 +11,6 @@ import java.time.Duration;
 import java.util.List;
 
 import com.salt.reactiveexample.domain.Book;
-import com.salt.reactiveexample.domain.BookInfo;
 import com.salt.reactiveexample.domain.Review;
 import com.salt.reactiveexample.exception.BookException;
 
