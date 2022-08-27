@@ -1,4 +1,4 @@
-Package utils.edu.examples;
+package edu.examples;
 
 import java.util.ArrayList;
 import java.util.Arrays;
