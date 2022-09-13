@@ -39,7 +39,7 @@ public class JavaBeansExample extends Applet
 //				same properties, events, or methods supported by the original type view.
 			//
 			
-			//TODO validate if the instanceof is of component before get type view
+			//validate if the instanceof is of component before get type view
 			//if (Beans.isInstanceOf(x, java.awt.Component.class)) {
 			java.awt.Component typeViewForComponent = (java.awt.Component)
 							Beans.getInstanceOf(mybean, java.awt.Component.class);
