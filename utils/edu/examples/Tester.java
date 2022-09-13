@@ -1,10 +1,7 @@
 package edu.examples;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class Tester {
 	

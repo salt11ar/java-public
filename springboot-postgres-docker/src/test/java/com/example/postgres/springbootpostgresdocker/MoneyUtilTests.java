@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 //import org.junit.jupiter.api.Test;
 import com.example.postgres.springbootpostgresdocker.utils.MoneyUtil;
-import org.junit.Assert;
 import org.junit.Test;
 
 

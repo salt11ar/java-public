@@ -1,14 +1,15 @@
 package com.example.postgres.springbootpostgresdocker;
 
-import com.example.postgres.springbootpostgresdocker.Model.Employee;
-import java.util.Collection;
 import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.example.postgres.springbootpostgresdocker.Model.Employee;
 
 @Repository 
 @Transactional(readOnly = true)

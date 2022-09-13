@@ -11,6 +11,7 @@ import java.io.IOException;
  * @author stomasini 12/06/2012
  *
  */
+@SuppressWarnings("removal")	
 public class JavaBeansExample extends Applet
 {
 
@@ -30,11 +31,11 @@ public class JavaBeansExample extends Applet
 			// from JavaBeans spec : You should never use Java casts to access different type views of a Java bean.
 			
 //			Programmers must note that:
-//				• they should never use Java “instanceof” or Java casts to navigate between different type
+//				ï¿½ they should never use Java ï¿½instanceofï¿½ or Java casts to navigate between different type
 //				views of a bean.
-//				• they should not assume that the result object of a beans.getInstanceOf call is the same
+//				ï¿½ they should not assume that the result object of a beans.getInstanceOf call is the same
 //				object as the input object.
-//				• they should not assume that the result object of a beans.getInstanceOf call supports the
+//				ï¿½ they should not assume that the result object of a beans.getInstanceOf call supports the
 //				same properties, events, or methods supported by the original type view.
 			//
 			
@@ -61,7 +62,6 @@ public class JavaBeansExample extends Applet
 		}
 		catch (ClassNotFoundException | IOException e)
 		{
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

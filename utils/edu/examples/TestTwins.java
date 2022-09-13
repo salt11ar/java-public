@@ -33,6 +33,7 @@ public class TestTwins {
         
     }
 
+    @SuppressWarnings("removal")	
     static boolean checkTwin(String ai, String bi) 
     {
 

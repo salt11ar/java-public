@@ -21,6 +21,7 @@ public class CountWordsWithoutUsingMethods {
 		System.out.println("Enter sentence");
 		String str = sc.nextLine();
 		System.out.println(countWords(str));
+		sc.close();
  	}
 
 }

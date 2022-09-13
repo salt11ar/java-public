@@ -4,13 +4,12 @@
 package edu.examples;
 
 import java.awt.Component;
-import java.io.Serializable;
 
 /**
  * @author stomasini 12/06/2012
  *
  */
-public class MyBean extends Component implements Serializable
+public class MyBean extends Component
 {
 
 	private String name;
@@ -34,7 +33,8 @@ public class MyBean extends Component implements Serializable
 	 */
 	public MyBean()
 	{
-		// TODO Auto-generated constructor stub
+		setThisIsPrivate("fromconstructor");
+		getThisIsPrivate();
 	}
 	/**
 	 * @return the name

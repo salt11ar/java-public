@@ -1,4 +1,5 @@
 import java.math.BigInteger;
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.math.BigDecimal;
@@ -85,11 +86,11 @@ public class Fibonacci {
             System.out.print("\t");
             BigDecimal ratio = new BigDecimal(hi);
             BigDecimal den = new BigDecimal(lo);
-            ratio = ratio.divide(den, Fractional_Digits, ratio.ROUND_HALF_DOWN);
+            ratio = ratio.divide(den, Fractional_Digits, RoundingMode.HALF_DOWN);
             System.out.print(ratio);
             System.out.print("\t");
             System.out.println(ratio.subtract(golden_ratio).setScale(Fractional_Digits,
-                                        ratio.ROUND_HALF_DOWN));
+                                        RoundingMode.HALF_DOWN));
             hi = lo.add(hi);
             lo = hi.subtract(lo);
         }

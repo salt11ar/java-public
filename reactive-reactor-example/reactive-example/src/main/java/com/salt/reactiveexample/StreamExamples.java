@@ -32,7 +32,7 @@ public class StreamExamples {
     public static void main(String[] args) {  
 
         List<String> letters = List.of("a","b","c");
-        try (Stream upper = letters.stream().map(String::toUpperCase)) {
+        try (Stream<String> upper = letters.stream().map(String::toUpperCase)) {
             System.out.println(upper.toList());
         }
 
@@ -75,8 +75,8 @@ public class StreamExamples {
         StreamExamples.printList(filteredList2);
         
         Comparator<Person> byNameAsc = (Person o1, Person o2) -> o1.getName().compareTo(o2.getName());
-        Comparator<Person> byNameDesc = (Person o1, Person o2) -> o2.getName().compareTo(o1.getName());
-        Comparator<Person> byBirthDate = (Person o1, Person o2) -> o1.getBirthDate().compareTo(o2.getBirthDate());
+        //Comparator<Person> byNameDesc = (Person o1, Person o2) -> o2.getName().compareTo(o1.getName());
+        //Comparator<Person> byBirthDate = (Person o1, Person o2) -> o1.getBirthDate().compareTo(o2.getBirthDate());
 
         //Sorted
         List<Person> filteredList3 = persons.stream()

@@ -1,7 +1,15 @@
 package edu.examples;
-import javax.swing.*;
-import javax.swing.table.*;
-import java.awt.event.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.swing.DefaultCellEditor;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.UIManager;
+import javax.swing.table.AbstractTableModel;
+import javax.swing.table.TableColumnModel;
 
 public class ComboBoxTable {
   public static void main(String[] args) {
@@ -13,7 +21,7 @@ public class ComboBoxTable {
     JTable tbl = new JTable(new ComboBoxTableModel());
 
     // Create the combo box editor
-    JComboBox comboBox = new JComboBox(ComboBoxTableModel.getValidStates());
+    var comboBox = new JComboBox<String>(ComboBoxTableModel.getValidStates());
     comboBox.setEditable(true);
     DefaultCellEditor editor = new DefaultCellEditor(comboBox);
 
@@ -56,9 +64,9 @@ class ComboBoxTableModel extends AbstractTableModel {
     return data[row][column];
   }
 
-  public Class getColumnClass(int column) {
+  /* public Class getColumnClass(int column) {
     return (data[0][column]).getClass();
-  }
+  } */
 
   public String getColumnName(int column) {
     return columnNames[column];

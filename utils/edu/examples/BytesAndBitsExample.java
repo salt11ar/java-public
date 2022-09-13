@@ -16,7 +16,7 @@ public class BytesAndBitsExample
 	 */
 	public BytesAndBitsExample()
 	{
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public static String removeZero(String str)
@@ -136,7 +136,7 @@ public class BytesAndBitsExample
 		trial1.add(c);
 
 	Collections.reverse(trial1);
-	ListIterator li = trial1.listIterator();
+	ListIterator<Character> li = trial1.listIterator();
 	while (li.hasNext())
 		System.out.print(li.next());
 			}
