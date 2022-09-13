@@ -120,6 +120,7 @@ class codilitySmallestPosIntegerArray {
         
     }
 
+    // Doing tests like this for pages like codility that don't support junit so easy
     public static boolean test1()
     {
         int[] thearray= new int[]{1, 3, 6, 4, 1, 2};
