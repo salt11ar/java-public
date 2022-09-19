@@ -1,14 +1,14 @@
 {
 	"folders": [
 		{
-			"path": "..\\utils"
+			"path": "utils"
 		},
 		{
 			"name": "reactive-example",
-			"path": "..\\reactive-reactor-example\\reactive-example"
+			"path": "reactive-reactor-example/reactive-example"
 		},
 		{
-			"path": "../challenges"
+			"path": "challenges"
 		}
 	],
 	"settings": {
