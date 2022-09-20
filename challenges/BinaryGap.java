@@ -18,75 +18,96 @@ N is an integer within the range [1..2,147,483,647].
 
 public class BinaryGap {
 
-  public static int solution(int N) {
-    int n = N;
+  static public int solution(int N)
+  {
+    int n=N;
     int maxGap = 0;
-    int i = 0;
-    int igap = 0;
+    int ipos = 1;
+    int ngap= 0;
 
-    System.out.println("input integer: " + n);
-    //convert to binary
+    System.out.println("input integer: "+ n);
+    //convert to binary 
     String str = Integer.toBinaryString(n);
-    System.out.println("input string: " + str);
+    System.out.println("input string: "+ str);
     int strlen = str.length();
-    System.out.println("input strlen: " + strlen);
+    System.out.println("input strlen: "+ strlen);
 
-    //find first 1
-
-    int firstIndex = str.indexOf('1');
-    System.out.println("1st i: " + firstIndex);
-    System.out.println("1st char: " + str.charAt(i));
-
-    i = firstIndex + 1;
-
-    while (i < strlen - 1) {
-      igap = 0; //reset for next gap loop
-      System.out.println("start loop... ");
-
-      while (str.charAt(i) == '0') {
-        System.out.println("i: " + i);
-        System.out.println("char: " + str.charAt(i));
-        i++;
-        igap++;
-        //System.out.println("igap: "+ igap);
-
-        if (i > strlen - 1) break; //exit from cero detection if no more chars
-      }
-
-      System.out.println("break on loop for ceros, i:" + i);
-
-      if (i > strlen - 1) {
-        System.out.println("breaking...");
-        break;
-      }
-
-      if (str.charAt(i) == '1') {
-        System.out.println("gap valid, cause found a 1 at: " + i);
-        if (igap > maxGap) {
-          System.out.println(
-            "new maxgap, previous: " + maxGap + "new: " + igap
-          );
-          maxGap = igap;
+    //find first 1 
+    int firstIndex = str.indexOf('1')+1;
+    System.out.println("1st i: "+ firstIndex);
+    System.out.println("1st char: "+ str.charAt(ipos-1));
+    ipos = firstIndex+1;
+    
+    System.out.println("start external loop... ");
+    while (ipos < strlen  )
+    {
+      ngap=0; //reset counter for next gap loop
+      System.out.println("start internal loop... ");
+        while ( ipos <= strlen )
+        {
+          if(str.charAt(ipos-1) == '0' )
+          {
+          System.out.println("ipos: "+ ipos);
+          System.out.println("char: "+ str.charAt(ipos-1));
+          ipos++;
+          ngap++;
+          }
+          else break;
         }
-      } else {
-        System.out.println("not 1. breaking...");
-        break;
-      }
+        System.out.println("break on loop for ceros, pos :"+ ipos);
+        if(ipos > strlen)  
+        {
+          System.out.println("breaking..." );
+          break;
+        }
+        if (str.charAt(ipos-1) =='1')
+        {
+          System.out.println("gap valid, cause found a 1 at pos: " +ipos);
+          if(ngap>maxGap )
+          {
+            System.out.println("new maxgap, previous: "+ maxGap+ " new: "+ ngap);
+            maxGap = ngap;
+          }
+        }
+        else
+        {
+          System.out.println("not 1. raise exception breaking..." );
+          break;
+        }
+        
+        //ṕerf improvement
+        //seek to next 1 before a cero 
+        //i = str.indexOf('0');
 
-      //ṕerf improvement
-      //seek to next 1 before a cero
-      //i = str.indexOf('0');
+        ipos++;
 
-      i++;
     }
+    return maxGap; 
 
-    System.out.println("Result: " + maxGap);
-    return maxGap;
   }
+
+
 
   public static void main(String[] args) {
-    int n = 529; //max 2147483647
+
+    int n; 
+
+    //max 2,147,483,647
+    
+    
+    n=32; //  result 0 
+    n=529;  // result 4 
+    n=20; // result 1  
+    n=500; // result 1  
+    n=1265; // result 1 
     int nResult = solution(n);
     System.out.println("Result: " + nResult);
-  }
+
+    }
+   
 }
+
+
+
+
+
