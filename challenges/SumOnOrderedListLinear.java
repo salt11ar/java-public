@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * solution should be O (askldfjaskldfjñklñjkl)
+ * solution should be O (lineal) 
  */
 public class SumOnOrderedListLinear {
     
