@@ -2,7 +2,22 @@
 	"folders": [
 		{
 			"path": "challenges"
+		},
+		{
+			"path": "../utils"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"java.completion.filteredTypes": [
+			"com.sun.*",
+			"sun.*",
+			"jdk.*",
+			"org.graalvm.*",
+			"io.micrometer.shaded.*",
+			"java.awt.*"
+		],
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar"
+		]
+	}
 }
