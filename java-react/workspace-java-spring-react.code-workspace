@@ -6,12 +6,10 @@
 		{
 			"name": "reactive-example",
 			"path": "..\\reactive-reactor-example\\reactive-example"
-		},
-		{
-			"path": "../challenges"
 		}
 	],
 	"settings": {
-		"java.configuration.updateBuildConfiguration": "interactive"
+		"java.configuration.updateBuildConfiguration": "interactive",
+		"java.compile.nullAnalysis.mode": "automatic"
 	}
 }
