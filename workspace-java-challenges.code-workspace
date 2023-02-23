@@ -9,9 +9,13 @@
 		},
 		{
 			"path": "challenges"
+		},
+		{
+			"path": "springboot-postgres-docker"
 		}
 	],
 	"settings": {
-		"java.configuration.updateBuildConfiguration": "interactive"
+		"java.configuration.updateBuildConfiguration": "interactive",
+		"java.compile.nullAnalysis.mode": "automatic"
 	}
 }
